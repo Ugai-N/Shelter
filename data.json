@@ -1,0 +1,75 @@
+[
+  {
+    "model": "shelter.dog",
+    "pk": 1,
+    "fields": {
+      "name": "Грейс",
+      "breed": 2,
+      "photo": "",
+      "birth": "2022-09-02"
+    }
+  },
+  {
+    "model": "shelter.dog",
+    "pk": 2,
+    "fields": {
+      "name": "Альт",
+      "breed": 1,
+      "photo": "",
+      "birth": "2020-09-22"
+    }
+  },
+  {
+    "model": "shelter.dog",
+    "pk": 3,
+    "fields": {
+      "name": "Рыжепс",
+      "breed": 2,
+      "photo": "photo/fuELHCEncQX3W6PQb5nDOBRYBLSmsqnB2W-HwDXMlio_plaintext_638113782015589772.jpg",
+      "birth": null
+    }
+  },
+  {
+    "model": "shelter.dog",
+    "pk": 4,
+    "fields": {
+      "name": "Кнопка",
+      "breed": 3,
+      "photo": "",
+      "birth": null
+    }
+  },
+  {
+    "model": "shelter.breed",
+    "pk": 1,
+    "fields": {
+      "breed": "Колли",
+      "description": null
+    }
+  },
+  {
+    "model": "shelter.breed",
+    "pk": 2,
+    "fields": {
+      "breed": "Ирландский сеттер",
+      "description": null
+    }
+  },
+  {
+    "model": "shelter.breed",
+    "pk": 3,
+    "fields": {
+      "breed": "Джек Рассел",
+      "description": "маленькая и сумасшедшая"
+    }
+  },
+  {
+    "model": "shelter.dog",
+    "fields": {
+      "name": "Лесси",
+      "breed": 1,
+      "photo": "",
+      "birth": null
+    }
+  }
+]
