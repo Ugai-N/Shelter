@@ -21,6 +21,7 @@ class Dog(models.Model):
 class Breed(models.Model):
     breed = models.CharField(max_length=250, verbose_name='порода')
     description = models.CharField(max_length=250, verbose_name='Описание', **NULLABLE)
+    pic = models.ImageField(upload_to='pics/', verbose_name='Картинка', **NULLABLE)
 
     def __str__(self):
         return f'{self.breed}'
