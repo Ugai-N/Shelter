@@ -1,0 +1,21 @@
+{% extends 'shelter/base.html' %}
+{% block content %}
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    <div class="col">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h2>Удалить данные собачки {{ object.name}}?</h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="mb-2 btn btn-danger form-control">Да</button>
+                  <a href="{% url 'shelter:category_dogs' object.breed.id %}" class="btn btn-warning form-control">Нет</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

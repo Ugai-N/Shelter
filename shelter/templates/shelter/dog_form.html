@@ -1,0 +1,31 @@
+{% extends 'shelter/base.html' %}
+{% block content %}
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    <div class="col">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                {% if object %}
+                <h2>Данные собачки:</h2>
+                {% else %}
+                <h2>Внесите данные собачки:</h2>
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="mb-2 btn btn-primary form-control">
+                        {% if object %}
+                        Сохранить
+                        {% else %}
+                        Создать
+                        {% endif %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
