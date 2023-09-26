@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'shelter',
     'crispy_forms',
     'crispy_bootstrap4',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
+
+AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
