@@ -6,7 +6,7 @@ from shelter.models import Dog, Breed, Parent
 # Register your models here.
 @admin.register(Dog)
 class DogAdmin(admin.ModelAdmin):
-    list_display = ('name', 'breed', 'birth', 'photo')
+    list_display = ('pk', 'name', 'breed', 'birth', 'author', 'photo')
     list_filter = ('breed',)
     search_fields = ('name',)
 

@@ -1,0 +1,20 @@
+{% extends 'shelter/base.html' %}
+{% load my_tags %}
+{% block content %}
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+        <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top"
+                 src="{{ object.photo|mymedia }}">
+            <div class="card-body">
+                <p class="card-text">
+                    {{ object.name|title }} ({{ object.birth }})
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

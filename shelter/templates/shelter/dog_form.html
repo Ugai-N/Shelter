@@ -27,6 +27,7 @@
                 </div>
             </div>
         </div>
+        {% if perms.dogs.change_parent %}
         <div class="col-6">
             <div class="card shadow-sm">
                 <div class="card-header">
@@ -46,6 +47,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </form>
 </div>
 {% endblock %}
