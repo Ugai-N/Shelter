@@ -12,6 +12,7 @@ from django.views.generic import CreateView, UpdateView
 
 from users.forms import UserProfileForm, UserRegisterForm
 from users.models import User
+from users.services import send_new_password_mail
 
 
 # class LoginView(BaseLoginView):
@@ -47,12 +48,7 @@ class ProfileView(LoginRequiredMixin, UpdateView):
 @login_required
 def create_password(request):
     new_password = ''.join([str(random.randint(0, 9)) for _ in range(12)])
-    send_mail(
-        subject='новый пароль!',
-        message=f'Ваш новый пароль: {new_password}',
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[request.user.email]
-    )
+    send_new_password_mail(request.user.email, new_password)
     request.user.set_password(new_password)
     request.user.save()
     return redirect(reverse('dogs:index'))
