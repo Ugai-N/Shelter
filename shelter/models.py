@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 
 NULLABLE = {'blank': True, 'null': True}
@@ -8,6 +9,7 @@ class Dog(models.Model):
     breed = models.ForeignKey('Breed', on_delete=models.CASCADE, verbose_name="порода")
     photo = models.ImageField(upload_to='photo/', verbose_name='фото', **NULLABLE)
     birth = models.DateField(verbose_name='ДР', **NULLABLE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, verbose_name="автор", **NULLABLE)
 
     def __str__(self):
         return f'{self.name} ({self.breed})'

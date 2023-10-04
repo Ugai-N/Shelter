@@ -1,0 +1,20 @@
+{% extends 'shelter/base.html' %}
+{% block content %}
+
+<div class="col-12">
+    <form class="row" method="post" enctype="multipart/form-data">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="card shadow-sm">
+                <div class="card-header">Вход:</div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="mb-2 btn btn-primary form-control">Войти</button>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
